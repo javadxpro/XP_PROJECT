@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XP HOLDING — پورتال رسمی</title>
+<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root{--xp-red:#cc3333;--xp-red-2:#ff4d5e;--xp-red-glow:rgba(204,51,51,.45);--xp-bg:#0d0808;--xp-fg:#f0e8e8;--xp-muted:#a08a8a;--xp-muted-2:#887777}
+*{margin:0;padding:0;box-sizing:border-box}
+body{min-height:100vh;background:#0d0808;color:var(--xp-fg);font-family:"Vazirmatn",system-ui,sans-serif;position:relative;overflow-x:hidden}
+.xp-bg{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.xp-orb{position:absolute;width:520px;height:520px;border-radius:50%;filter:blur(120px);opacity:.55;animation:xp-float 18s ease-in-out infinite}
+.xp-orb-1{top:-140px;left:-120px;background:radial-gradient(circle,#cc3333 0%,transparent 65%)}
+.xp-orb-2{bottom:-160px;right:-140px;background:radial-gradient(circle,#7a1717 0%,transparent 65%);animation-delay:-6s}
+.xp-orb-3{top:40%;left:50%;width:380px;height:380px;background:radial-gradient(circle,#ff4d5e 0%,transparent 65%);opacity:.25;animation-delay:-12s}
+@keyframes xp-float{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(40px,-30px) scale(1.1)}}
+.xp-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(204,51,51,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(204,51,51,.06) 1px,transparent 1px);background-size:60px 60px;-webkit-mask-image:radial-gradient(circle at 50% 40%,black,transparent 75%);mask-image:radial-gradient(circle at 50% 40%,black,transparent 75%);opacity:.6}
+.xp-container{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:2rem 1.5rem}
+.xp-header{display:flex;justify-content:space-between;align-items:center;padding:1rem 0 2rem;border-bottom:1px solid rgba(204,51,51,.12);flex-wrap:wrap;gap:1rem}
+.xp-brand{display:flex;align-items:center;gap:14px}
+.xp-logo-wrap{position:relative;width:80px;height:80px}
+.xp-logo-wrap img{width:100%;height:100%;border-radius:50%;border:2px solid var(--xp-red);box-shadow:0 0 40px var(--xp-red-glow);object-fit:cover}
+.xp-logo-ring{position:absolute;inset:-6px;border-radius:50%;border:1px dashed rgba(204,51,51,.5);animation:xp-spin 12s linear infinite}
+@keyframes xp-spin{to{transform:rotate(360deg)}}
+.xp-brand h1{font-size:1.8rem;font-weight:800;letter-spacing:.5px}
+.xp-brand h1 span{color:var(--xp-red)}
+.xp-header-right{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.xp-nav{display:flex;gap:1.4rem;flex-wrap:wrap}
+.xp-nav a{color:var(--xp-muted);text-decoration:none;font-weight:500;font-size:.95rem;transition:.3s;position:relative}
+.xp-nav a:hover{color:#ff5555}
+.xp-nav a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--xp-red);transform:scaleX(0);transition:transform .3s}
+.xp-nav a:hover::after{transform:scaleX(1)}
+.xp-nav a i{margin:0 6px}
+.xp-lang{display:flex;gap:.5rem}
+.xp-lang-btn{padding:.4rem 1rem;border-radius:50px;border:1px solid rgba(255,255,255,.1);background:transparent;color:var(--xp-muted);cursor:pointer;font-family:inherit;font-size:.8rem;font-weight:600;transition:.3s}
+.xp-lang-btn:hover{border-color:var(--xp-red);color:var(--xp-fg)}
+.xp-lang-btn.active{background:var(--xp-red);border-color:var(--xp-red);color:#fff;box-shadow:0 0 20px rgba(204,51,51,.35)}
+.xp-hero{position:relative;text-align:center;padding:4.5rem 1rem 5rem;border-radius:2rem;margin:2rem 0 3rem;background:rgba(255,255,255,.02);border:1px solid rgba(204,51,51,.1);overflow:hidden;animation:xp-fade-up .8s ease-out both}
+.xp-hero-glow{position:absolute;inset:0;background:radial-gradient(circle at 30% 50%,rgba(204,51,51,.18),transparent 60%),radial-gradient(circle at 75% 60%,rgba(255,77,94,.12),transparent 55%);pointer-events:none}
+.xp-hero>*{position:relative}
+.xp-hero h2{font-size:2.8rem;font-weight:800;margin:0 0 1rem}
+.xp-gradient-text{background:linear-gradient(90deg,#ff4d5e,#cc3333,#ff8a8a);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:xp-shine 4s linear infinite}
+@keyframes xp-shine{0%{background-position:0% 0%}100%{background-position:200% 0%}}
+.xp-hero p{color:#b09a9a;font-size:1.1rem;max-width:640px;margin:0 auto 2rem;line-height:1.9}
+.xp-hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.xp-btn-primary{position:relative;overflow:hidden;padding:.85rem 2.2rem;background:linear-gradient(135deg,#cc3333,#ff4d5e);color:#fff;border-radius:60px;text-decoration:none;font-weight:700;box-shadow:0 10px 30px -8px var(--xp-red-glow);transition:transform .3s,box-shadow .3s}
+.xp-btn-primary::before{content:"";position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);transition:left .6s}
+.xp-btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 40px -8px var(--xp-red-glow)}
+.xp-btn-primary:hover::before{left:100%}
+.xp-btn-secondary{padding:.85rem 2.2rem;background:transparent;color:var(--xp-fg);border-radius:60px;text-decoration:none;font-weight:600;border:1px solid rgba(255,255,255,.15);transition:.3s}
+.xp-btn-secondary:hover{border-color:var(--xp-red);color:#ff5555;background:rgba(204,51,51,.06)}
+.xp-section{margin-bottom:3.5rem;animation:xp-fade-up .7s ease-out both}
+.xp-section-title{font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;display:flex;align-items:center;gap:12px}
+.xp-section-title i{color:var(--xp-red)}
+.xp-social-grid{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center}
+.xp-social{display:flex;align-items:center;gap:12px;padding:.9rem 1.8rem;background:rgba(255,255,255,.04);border:1px solid rgba(204,51,51,.1);border-radius:60px;color:var(--xp-fg);text-decoration:none;font-weight:500;transition:.35s;position:relative;overflow:hidden}
+.xp-social:hover{transform:translateY(-5px);background:rgba(204,51,51,.08)}
+.xp-social i{font-size:1.4rem}
+.xp-social.ig i{color:#e4405f}
+.xp-social.tg i{color:#29a9eb}
+.xp-social.yt i{color:#ff3b3b}
+.xp-social.dc i{color:#7289da}
+.xp-social.ig:hover{border-color:#e4405f;box-shadow:0 10px 30px -10px #e4405f}
+.xp-social.tg:hover{border-color:#29a9eb;box-shadow:0 10px 30px -10px #29a9eb}
+.xp-social.yt:hover{border-color:#ff3b3b;box-shadow:0 10px 30px -10px #ff3b3b}
+.xp-social.dc:hover{border-color:#7289da;box-shadow:0 10px 30px -10px #7289da}
+.xp-games{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.8rem}
+.xp-game{position:relative;overflow:hidden;background:rgba(255,255,255,.03);border:1px solid rgba(204,51,51,.08);border-radius:1.5rem;padding:2rem 1.2rem;text-align:center;transition:transform .4s,box-shadow .4s,border-color .4s}
+.xp-game:hover{transform:translateY(-10px);border-color:rgba(204,51,51,.4);box-shadow:0 20px 50px -12px rgba(204,51,51,.25)}
+.xp-game-shine{position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.06) 50%,transparent 60%);transform:translateX(-100%);transition:transform .8s;pointer-events:none}
+.xp-game:hover .xp-game-shine{transform:translateX(100%)}
+.xp-game-logo img{width:130px;height:130px;object-fit:contain;margin-bottom:1rem;border-radius:20px;filter:drop-shadow(0 8px 20px rgba(204,51,51,.3));transition:transform .4s}
+.xp-game:hover .xp-game-logo img{transform:scale(1.08) rotate(-2deg)}
+.xp-game h3{font-size:1.1rem;margin:.4rem 0}
+.xp-game p{color:var(--xp-muted-2);font-size:.9rem;line-height:1.7;margin:.5rem 0}
+.xp-tag{display:inline-block;margin-top:.9rem;padding:5px 16px;border-radius:50px;font-size:.75rem;background:rgba(204,51,51,.12);color:#ff8080;border:1px solid rgba(204,51,51,.2)}
+.xp-news{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.xp-news-card{background:rgba(255,255,255,.02);border:1px solid rgba(204,51,51,.08);border-radius:1.2rem;padding:1.6rem;transition:.35s}
+.xp-news-card:hover{border-color:rgba(204,51,51,.25);background:rgba(204,51,51,.04);transform:translateY(-4px)}
+.xp-news-date{font-size:.78rem;color:#665555;margin-bottom:.6rem;display:flex;align-items:center;gap:6px}
+.xp-news-card h4{font-size:1.05rem;margin:0 0 .5rem}
+.xp-news-card p{color:var(--xp-muted);font-size:.9rem;line-height:1.7}
+.xp-read-more{display:inline-block;margin-top:.9rem;color:var(--xp-red);text-decoration:none;font-weight:700;font-size:.85rem;transition:.3s}
+.xp-read-more:hover{color:#ff6b6b;letter-spacing:.5px}
+.xp-footer{text-align:center;padding:2rem 0 1rem;color:#665555;font-size:.8rem;border-top:1px solid rgba(204,51,51,.1);margin-top:2rem}
+@keyframes xp-fade-up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.lang-fa{display:inline}.lang-en{display:none}
+body.en .lang-fa{display:none}body.en .lang-en{display:inline}
+@media(max-width:768px){.xp-header{flex-direction:column;align-items:flex-start}.xp-hero h2{font-size:2rem}.xp-logo-wrap,.xp-logo-wrap img{width:60px;height:60px}}
+@media(max-width:480px){.xp-hero{padding:3rem 1rem}.xp-hero h2{font-size:1.6rem}.xp-brand h1{font-size:1.3rem}}
+</style>
+</head>
+<body>
+<div class="xp-bg"><div class="xp-orb xp-orb-1"></div><div class="xp-orb xp-orb-2"></div><div class="xp-orb xp-orb-3"></div><div class="xp-grid"></div></div>
+<div class="xp-container">
+<header class="xp-header">
+  <div class="xp-brand">
+    <div class="xp-logo-wrap">
+      <img src="https://github.com/javadxpro/XP_PROJECT/blob/main/logo_profile_xp.png?raw=true" alt="XP HOLDING">
+      <span class="xp-logo-ring"></span>
+    </div>
+    <h1><span>XP</span> HOLDING</h1>
+  </div>
+  <div class="xp-header-right">
+    <nav class="xp-nav">
+      <a href="#top"><i class="fas fa-home"></i><span class="lang-fa">خانه</span><span class="lang-en">Home</span></a>
+      <a href="#games"><i class="fas fa-gamepad"></i><span class="lang-fa">بازی‌ها</span><span class="lang-en">Games</span></a>
+      <a href="#news"><i class="fas fa-newspaper"></i><span class="lang-fa">اخبار</span><span class="lang-en">News</span></a>
+      <a href="#social"><i class="fas fa-share-alt"></i><span class="lang-fa">شبکه‌ها</span><span class="lang-en">Social</span></a>
+    </nav>
+    <div class="xp-lang">
+      <button class="xp-lang-btn active" data-lang="fa">🇮🇷 فارسی</button>
+      <button class="xp-lang-btn" data-lang="en">🇬🇧 English</button>
+    </div>
+  </div>
+</header>
+<section class="xp-hero" id="top">
+  <div class="xp-hero-glow"></div>
+  <h2>
+    <span class="lang-fa">به <span class="xp-gradient-text">XP HOLDING</span> خوش آمدید</span>
+    <span class="lang-en">Welcome to <span class="xp-gradient-text">XP HOLDING</span></span>
+  </h2>
+  <p class="lang-fa">هولدینگ پیشرو در حوزه تکنولوژی، گیمینگ و سرمایه‌گذاری — جایی که آینده‌ای روشن در انتظار شماست.</p>
+  <p class="lang-en">A leading holding company in technology, gaming, and investment — where a bright future awaits you.</p>
+  <div class="xp-hero-btns">
+    <a href="#games" class="xp-btn-primary"><span class="lang-fa">مشاهده بازی‌ها</span><span class="lang-en">View Games</span></a>
+    <a href="#social" class="xp-btn-secondary"><span class="lang-fa">شبکه‌های اجتماعی</span><span class="lang-en">Social Media</span></a>
+  </div>
+</section>
+<section id="social" class="xp-section">
+  <div class="xp-section-title"><i class="fas fa-share-alt"></i><span class="lang-fa">شبکه‌های اجتماعی</span><span class="lang-en">Social Media</span></div>
+  <div class="xp-social-grid">
+    <a href="https://www.instagram.com/xp_holding?igsh=eXViMzN2dGhocG5t" target="_blank" class="xp-social ig"><i class="fab fa-instagram"></i><span>Instagram</span></a>
+    <a href="https://t.me/XP_HOLDING" target="_blank" class="xp-social tg"><i class="fab fa-telegram"></i><span>Telegram</span></a>
+    <a href="https://www.youtube.com/@XP.HOLDING" target="_blank" class="xp-social yt"><i class="fab fa-youtube"></i><span>YouTube</span></a>
+    <a href="#" class="xp-social dc"><i class="fab fa-discord"></i><span>Discord</span></a>
+  </div>
+</section>
+<section id="games" class="xp-section">
+  <div class="xp-section-title"><i class="fas fa-gamepad"></i><span class="lang-fa">بازی‌های ما</span><span class="lang-en">Our Games</span></div>
+  <div class="xp-games">
+    <article class="xp-game"><div class="xp-game-shine"></div>
+      <div class="xp-game-logo"><img src="https://github.com/javadxpro/XP_PROJECT/blob/main/football-logo.png?raw=true" alt=""></div>
+      <h3><span class="lang-fa">فوتبال خاکی ایران: کوی ابوذر</span><span class="lang-en">Iran Dirty Football: Kooye Aboozar</span></h3>
+      <p><span class="lang-fa">بازی فوتبال خیابانی با حال و هوای محله‌های قدیمی ایران</span><span class="lang-en">A street football game with the vibe of old Iranian neighborhoods</span></p>
+      <span class="xp-tag">🔥 <span class="lang-fa">جدید</span><span class="lang-en">New</span></span>
+    </article>
+    <article class="xp-game"><div class="xp-game-shine"></div>
+      <div class="xp-game-logo"><img src="https://github.com/javadxpro/XP_PROJECT/blob/main/real-logo.png?raw=true" alt=""></div>
+      <h3><span class="lang-fa">مسابقه واقعی: میدان نبرد</span><span class="lang-en">Real Match: Battleground</span></h3>
+      <p><span class="lang-fa">مسابقات هیجان‌انگیز و واقع‌گرایانه در میدان نبرد</span><span class="lang-en">Exciting and realistic battles in the battleground arena</span></p>
+      <span class="xp-tag">⚡ <span class="lang-fa">محبوب</span><span class="lang-en">Popular</span></span>
+    </article>
+  </div>
+</section>
+<section id="news" class="xp-section">
+  <div class="xp-section-title"><i class="fas fa-newspaper"></i><span class="lang-fa">آخرین اخبار</span><span class="lang-en">Latest News</span></div>
+  <div class="xp-news">
+    <article class="xp-news-card">
+      <div class="xp-news-date"><i class="far fa-calendar-alt"></i> <span class="lang-fa">۱۴۰۵/۰۴/۱۳</span><span class="lang-en">2026/07/04</span></div>
+      <h4><span class="lang-fa">رونمایی از بازی جدید فوتبال خاکی ایران</span><span class="lang-en">New Game Reveal: Iran Dirty Football</span></h4>
+      <p><span class="lang-fa">نسخه اول بازی فوتبال خاکی ایران با گرافیک جذاب و گیم‌پلی واقع‌گرایانه معرفی شد.</span><span class="lang-en">The first version of Iran Dirty Football with stunning graphics and realistic gameplay has been revealed.</span></p>
+      <a href="#" class="xp-read-more"><span class="lang-fa">بیشتر بخوانید ←</span><span class="lang-en">Read More →</span></a>
+    </article>
+  </div>
+</section>
+<footer class="xp-footer"><span class="lang-fa">XP HOLDING © ۱۴۰۵ — تمامی حقوق محفوظ است</span><span class="lang-en">XP HOLDING © 2026 — All rights reserved</span></footer>
+</div>
+<script>
+document.querySelectorAll('.xp-lang-btn').forEach(b=>b.addEventListener('click',()=>{
+  const l=b.dataset.lang;
+  document.body.classList.toggle('en',l==='en');
+  document.documentElement.dir=l==='fa'?'rtl':'ltr';
+  document.documentElement.lang=l;
+  document.querySelectorAll('.xp-lang-btn').forEach(x=>x.classList.toggle('active',x.dataset.lang===l));
+}));
+</script>
+</body>
+</html>
