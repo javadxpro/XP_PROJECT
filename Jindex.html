@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>کلکسیون جواد حامدی فر | Javad Hamedifar Collection</title>
+    
+    <!-- ===== Font Awesome Icons ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    
+    <!-- ===== فونت فارسی وزیرمتن ===== -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" />
+    
+    <!-- ===== فونت انگلیسی Inter ===== -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Vazirmatn', 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(145deg, #0b0e1a 0%, #141a2b 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1rem;
+        }
+
+        .collection-card {
+            max-width: 1100px;
+            width: 100%;
+            background: rgba(20, 26, 43, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 48px;
+            padding: 2.5rem 2.2rem;
+            box-shadow: 0 25px 50px -8px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 1.5rem;
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .profile-pic {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2.5px solid rgba(79, 172, 254, 0.4);
+            box-shadow: 0 0 25px rgba(79, 172, 254, 0.15);
+            flex-shrink: 0;
+            background: #0f1422;
+        }
+
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .profile-info h1 {
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: #f0f4ff;
+            letter-spacing: -0.3px;
+        }
+
+        .profile-info h1 small {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #8892b0;
+            margin-right: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        .profile-info .badge {
+            font-size: 0.8rem;
+            color: #4facfe;
+            background: rgba(79, 172, 254, 0.1);
+            padding: 2px 14px;
+            border-radius: 40px;
+            border: 1px solid rgba(79, 172, 254, 0.1);
+            display: inline-block;
+            margin-top: 4px;
+        }
+
+        /* ===== دکمه تغییر زبان ===== */
+        .lang-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 4px 6px;
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            cursor: pointer;
+            transition: 0.3s;
+            user-select: none;
+        }
+
+        .lang-toggle:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(79, 172, 254, 0.2);
+        }
+
+        .lang-toggle .lang-btn {
+            padding: 4px 14px;
+            border-radius: 30px;
+            border: none;
+            background: transparent;
+            color: #8892b0;
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+            font-family: inherit;
+        }
+
+        .lang-toggle .lang-btn.active {
+            background: rgba(79, 172, 254, 0.2);
+            color: #fff;
+            box-shadow: 0 0 15px rgba(79, 172, 254, 0.1);
+        }
+
+        .lang-toggle .lang-btn:hover {
+            color: #fff;
+        }
+
+        .lang-toggle .divider {
+            color: #5d6a8a;
+            font-size: 0.7rem;
+        }
+
+        /* ===== شبکه‌های اجتماعی (هدر) ===== */
+        .social-header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .social-header .label {
+            font-size: 0.75rem;
+            color: #5d6a8a;
+            letter-spacing: 0.5px;
+        }
+
+        .social-header a {
+            color: #8892b0;
+            font-size: 1.2rem;
+            transition: 0.25s;
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            text-decoration: none;
+        }
+
+        .social-header a:hover {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .social-header a.youtube:hover { color: #ff0033; border-color: rgba(255, 0, 51, 0.2); }
+        .social-header a.instagram:hover { color: #e4405f; border-color: rgba(228, 64, 95, 0.2); }
+        .social-header a.linkedin:hover { color: #0a66c2; border-color: rgba(10, 102, 194, 0.2); }
+        .social-header a.github:hover { color: #f0f6fc; border-color: rgba(255, 255, 255, 0.1); }
+        .social-header a.telegram:hover { color: #0088cc; border-color: rgba(0, 136, 204, 0.2); }
+        .social-header a.twitter:hover { color: #1da1f2; border-color: rgba(29, 161, 242, 0.2); }
+
+        /* ===== بخش‌ها ===== */
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 1.8rem 0 1rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .section-title h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #b6c8ff;
+            letter-spacing: 0.3px;
+        }
+
+        .section-title i {
+            color: #4facfe;
+            font-size: 1.1rem;
+        }
+
+        .cards-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .card-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 0.9rem 1.5rem 0.9rem 1.2rem;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 12px -6px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            min-height: 100px;
+        }
+
+        .card-item:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(79, 172, 254, 0.12);
+            transform: translateX(4px);
+        }
+
+        /* ===== پس‌زمینه عریض برای سایت‌ها ===== */
+        .card-item.site-bg-gamenet {
+            background: rgba(20, 26, 43, 0.85);
+            position: relative;
+            min-height: 120px;
+        }
+
+        .card-item.site-bg-gamenet::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://raw.githubusercontent.com/javadxpro/XP_PROJECT/main/gamenet-p1.png') no-repeat center center / cover;
+            opacity: 0.25;
+            z-index: 0;
+        }
+
+        .card-item.site-bg-gamenet::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 0;
+        }
+
+        .card-item.site-bg-volexturn {
+            background: rgba(20, 26, 43, 0.85);
+            position: relative;
+            min-height: 120px;
+        }
+
+        .card-item.site-bg-volexturn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://raw.githubusercontent.com/javadxpro/XP_PROJECT/main/volexturn-p1.png') no-repeat center center / cover;
+            opacity: 0.25;
+            z-index: 0;
+        }
+
+        .card-item.site-bg-volexturn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 0;
+        }
+
+        /* ===== پس‌زمینه کامل تصاویر بازی‌ها (9:16) ===== */
+        .card-item.game-bg-football {
+            background: rgba(20, 26, 43, 0.85);
+            position: relative;
+        }
+
+        .card-item.game-bg-football::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://raw.githubusercontent.com/javadxpro/XP_PROJECT/main/football-p1.png') no-repeat center center / cover;
+            opacity: 0.25;
+            z-index: 0;
+        }
+
+        .card-item.game-bg-football::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 0;
+        }
+
+        .card-item.game-bg-battleground {
+            background: rgba(20, 26, 43, 0.85);
+            position: relative;
+        }
+
+        .card-item.game-bg-battleground::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://raw.githubusercontent.com/javadxpro/XP_PROJECT/main/real-p1.png') no-repeat center center / cover;
+            opacity: 0.25;
+            z-index: 0;
+        }
+
+        .card-item.game-bg-battleground::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 0;
+        }
+
+        .card-item .card-left,
+        .card-item .card-action {
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-left {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            color: #4facfe;
+            flex-shrink: 0;
+            margin-top: 2px;
+            z-index: 2;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .card-icon img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .card-icon.gold {
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            color: #f7b731;
+        }
+
+        .card-icon.purple {
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            color: #8b5cf6;
+        }
+
+        .card-icon.green {
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            color: #34d399;
+        }
+
+        .card-icon.pink {
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            color: #f472b6;
+        }
+
+        .card-icon.orange {
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            color: #fb923c;
+        }
+
+        .card-icon.blue {
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            color: #4facfe;
+        }
+
+        .card-text h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #eef3ff;
+            margin-bottom: 2px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-text p {
+            font-size: 0.8rem;
+            color: #c8d0e6;
+            line-height: 1.6;
+            max-width: 500px;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-text .status-badge {
+            font-size: 0.65rem;
+            color: #f7b731;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            padding: 1px 12px;
+            border-radius: 40px;
+            border: 1px solid rgba(247, 183, 49, 0.15);
+            display: inline-block;
+            margin-top: 4px;
+        }
+
+        .card-text .status-badge.blue {
+            color: #4facfe;
+            border-color: rgba(79, 172, 254, 0.15);
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .card-action {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-action .btn-link {
+            color: #4facfe;
+            text-decoration: none;
+            font-size: 0.78rem;
+            padding: 4px 14px;
+            border-radius: 40px;
+            border: 1px solid rgba(79, 172, 254, 0.12);
+            transition: 0.2s;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            white-space: nowrap;
+        }
+
+        .card-action .btn-link:hover {
+            background: rgba(79, 172, 254, 0.2);
+            border-color: rgba(79, 172, 254, 0.3);
+        }
+
+        .card-action .btn-link.gold {
+            color: #f7b731;
+            border-color: rgba(247, 183, 49, 0.15);
+        }
+
+        .card-action .btn-link.gold:hover {
+            background: rgba(247, 183, 49, 0.15);
+        }
+
+        .card-action span {
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            padding: 2px 12px;
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        /* ===== گالری ===== */
+        .gallery-section {
+            margin-top: 2.5rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .gallery-section .gallery-text {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .gallery-section .gallery-text i {
+            font-size: 1.8rem;
+            color: #f7b731;
+        }
+
+        .gallery-section .gallery-text h3 {
+            font-size: 1.1rem;
+            color: #eef3ff;
+            font-weight: 600;
+        }
+
+        .gallery-section .gallery-text p {
+            font-size: 0.8rem;
+            color: #8892b0;
+        }
+
+        .gallery-btn {
+            background: linear-gradient(135deg, rgba(79, 172, 254, 0.15), rgba(139, 92, 246, 0.1));
+            padding: 10px 28px;
+            border-radius: 40px;
+            border: 1px solid rgba(79, 172, 254, 0.2);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+        }
+
+        .gallery-btn:hover {
+            background: rgba(79, 172, 254, 0.2);
+            border-color: rgba(79, 172, 254, 0.4);
+            transform: scale(1.02);
+        }
+
+        .gallery-btn i {
+            color: #f7b731;
+        }
+
+        /* ===== فوتر ===== */
+        .footer-note {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+            padding-top: 1.8rem;
+            color: #5d6a8a;
+            font-size: 0.8rem;
+        }
+
+        .footer-note .status {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .footer-note .status .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #34d399;
+            display: inline-block;
+            animation: pulse 1.8s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.3; transform: scale(0.9); }
+            50% { opacity: 1; transform: scale(1.1); }
+            100% { opacity: 0.3; transform: scale(0.9); }
+        }
+
+        /* ===== کلاس‌های تغییر زبان ===== */
+        .lang-fa .en-only { display: none; }
+        .lang-en .fa-only { display: none; }
+        
+        .lang-en {
+            direction: ltr;
+        }
+        
+        .lang-en .profile-info h1 small {
+            margin-right: 0;
+            margin-left: 10px;
+        }
+        
+        .lang-en .card-action .btn-link i {
+            transform: scaleX(-1);
+        }
+        
+        .lang-en .gallery-btn i.fa-arrow-left {
+            transform: scaleX(-1);
+        }
+
+        /* ===== ریسپانسیو ===== */
+        @media (max-width: 700px) {
+            .collection-card {
+                padding: 1.5rem 1rem;
+                border-radius: 32px;
+            }
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            .social-header {
+                align-self: flex-start;
+                gap: 8px;
+            }
+            .social-header a {
+                width: 34px;
+                height: 34px;
+                font-size: 1rem;
+            }
+            .profile-info h1 {
+                font-size: 1.3rem;
+            }
+            .profile-info h1 small {
+                font-size: 0.8rem;
+                display: block;
+                margin-right: 0;
+                margin-top: 2px;
+            }
+            .profile-pic {
+                width: 60px;
+                height: 60px;
+            }
+            .card-item {
+                padding: 0.8rem 1rem;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .card-left {
+                min-width: unset;
+                width: 100%;
+            }
+            .card-action {
+                width: 100%;
+                justify-content: flex-start;
+            }
+            .gallery-section {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .lang-toggle {
+                align-self: flex-start;
+            }
+        }
+
+        @media (max-width: 450px) {
+            .card-text p {
+                font-size: 0.75rem;
+            }
+            .card-icon {
+                width: 34px;
+                height: 34px;
+                font-size: 1rem;
+            }
+            .social-header .label {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="collection-card lang-fa" id="app">
+
+    <!-- ===== HEADER ===== -->
+    <div class="header">
+        <div class="profile-section">
+            <div class="profile-pic">
+                <img 
+                    src="https://raw.githubusercontent.com/javadxpro/XP_PROJECT/main/ChatGPT%20Image%20Jun%2026%2C%202026%2C%2010_27_50%20PM.png" 
+                    alt="جواد حامدی فر"
+                    onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%221a2140%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%22100%22 y=%22110%22 font-size=%2220%22 fill=%22%238892b0%22 text-anchor=%22middle%22%3EJ%3C/text%3E%3C/svg%3E';"
+                />
+            </div>
+            <div class="profile-info">
+                <h1>
+                    <span class="fa-only">جواد حامدی فر</span>
+                    <span class="en-only">Javad Hamedifar</span>
+                    <small>
+                        <span class="fa-only">Javad Hamedifar</span>
+                        <span class="en-only">جواد حامدی فر</span>
+                    </small>
+                </h1>
+                <span class="badge">
+                    <i class="fas fa-crown" style="margin-left:6px;"></i>
+                    <span class="fa-only">کلکسیون‌دار</span>
+                    <span class="en-only">Collector</span>
+                </span>
+            </div>
+        </div>
+
+        <!-- ===== دکمه تغییر زبان + شبکه‌های اجتماعی ===== -->
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:14px;">
+            <div class="lang-toggle" id="langToggle">
+                <button class="lang-btn active" data-lang="fa">فارسی</button>
+                <span class="divider">|</span>
+                <button class="lang-btn" data-lang="en">English</button>
+            </div>
+
+            <div class="social-header">
+                <span class="label fa-only">دنبال کنید:</span>
+                <span class="label en-only">Follow:</span>
+                <a href="https://youtube.com/@javadxpro?si=L5TVk_gDO9Iq2DTT" target="_blank" class="youtube" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/javadxpro66?igsh=MWVlc3hnOGJ0ZXpqYQ==" target="_blank" class="instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://ir.linkedin.com/in/%D8%AC%D9%88%D8%A7%D8%AF-%D8%AD%D8%A7%D9%85%D8%AF%DB%8C-%D9%81%D8%B1-974733283" target="_blank" class="linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/javadxpro" target="_blank" class="github" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://t.me/javadxprogg" target="_blank" class="telegram" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                <a href="https://x.com/javad_56X" target="_blank" class="twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== بخش ۱: سایت‌ها | Websites (با پس‌زمینه عریض) ===== -->
+    <div class="section-title">
+        <i class="fas fa-globe"></i>
+        <h2><span class="fa-only">سایت‌ها</span><span class="en-only">Websites</span></h2>
+    </div>
+    <div class="cards-grid">
+        <!-- سایت گیم نت با پس‌زمینه gamenet-p1 -->
+        <div class="card-item site-bg-gamenet">
+            <div class="card-left">
+                <div class="card-icon gold">
+                    <img src="https://raw.githubusercontent.com/javadxpro/XP_PROJECT/main/gamenet.png" alt="گیم نت" />
+                </div>
+                <div class="card-text">
+                    <h3><span class="fa-only">سایت گیم نت</span><span class="en-only">GameNet Website</span></h3>
+                    <p><span class="fa-only">سایت اختصاصی گیم نت حامدی فر، واقع در کوی ابوذر.</span><span class="en-only">Hamedifar's exclusive GameNet website, located in Kooye Abozar.</span></p>
+                </div>
+            </div>
+            <div class="card-action">
+                <a href="https://javadxpro.github.io/Gamenet/web.html" target="_blank" class="btn-link gold"><span class="fa-only">مشاهده</span><span class="en-only">View</span> <i class="fas fa-arrow-left" style="margin-right:6px;"></i></a>
+            </div>
+        </div>
+
+        <!-- سایت volexturn با پس‌زمینه volexturn-p1 -->
+        <div class="card-item site-bg-volexturn">
+            <div class="card-left">
+                <div class="card-icon purple">
+                    <img src="https://raw.githubusercontent.com/javadxpro/XP_PROJECT/main/volexturn.png" alt="volexturn" />
+                </div>
+                <div class="card-text">
+                    <h3><span class="fa-only">سایت volexturn</span><span class="en-only">Volexturn Website</span></h3>
+                    <p><span class="fa-only">سایت اختصاصی هلدینگ volexturn.</span><span class="en-only">The exclusive website of Volexturn Holding.</span></p>
+                </div>
+            </div>
+            <div class="card-action">
+                <a href="https://javadxpro.github.io/XP_PROJECT/" target="_blank" class="btn-link"><span class="fa-only">مشاهده</span><span class="en-only">View</span> <i class="fas fa-arrow-left" style="margin-right:6px;"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== بخش ۲: شرکت‌ها | Companies (ساده، بدون پس‌زمینه) ===== -->
+    <div class="section-title">
+        <i class="fas fa-building"></i>
+        <h2><span class="fa-only">شرکت‌ها</span><span class="en-only">Companies</span></h2>
+    </div>
+    <div class="cards-grid">
+        <div class="card-item">
+            <div class="card-left">
+                <div class="card-icon blue"><i class="fas fa-building"></i></div>
+                <div class="card-text">
+                    <h3><span class="fa-only">هلدینگ volexturn</span><span class="en-only">Volexturn Holding</span></h3>
+                    <p><span class="fa-only">هلدینگ volexturn</span><span class="en-only">Volexturn Holding</span></p>
+                </div>
+            </div>
+            <div class="card-action">
+                <a href="#" class="btn-link"><span class="fa-only">مشاهده</span><span class="en-only">View</span> <i class="fas fa-arrow-left" style="margin-right:6px;"></i></a>
+            </div>
+        </div>
+        <div class="card-item">
+            <div class="card-left">
+                <div class="card-icon green"><i class="fas fa-cubes"></i></div>
+                <div class="card-text">
+                    <h3><span class="fa-only">شرکت بازی‌سازی volexturn studio</span><span class="en-only">Volexturn Studio Game Development</span></h3>
+                    <p><span class="fa-only">شرکت متمرکز بر بازی‌سازی در هلدینگ volexturn.</span><span class="en-only">A company focused on game development in Volexturn Holding.</span></p>
+                </div>
+            </div>
+            <div class="card-action">
+                <a href="#" class="btn-link"><span class="fa-only">مشاهده</span><span class="en-only">View</span> <i class="fas fa-arrow-left" style="margin-right:6px;"></i></a>
+            </div>
+        </div>
+        <div class="card-item">
+            <div class="card-left">
+                <div class="card-icon pink"><i class="fas fa-film"></i></div>
+                <div class="card-text">
+                    <h3><span class="fa-only">استودیو فیلم‌سازی volexturn video studio</span><span class="en-only">Volexturn Video Studio Filmmaking</span></h3>
+                    <p><span class="fa-only">استودیو متمرکز بر ساخت ویدیوهای کوتاه و تریلرها در هلدینگ volexturn.</span><span class="en-only">A studio focused on short videos and trailers in Volexturn Holding.</span></p>
+                </div>
+            </div>
+            <div class="card-action">
+                <a href="#" class="btn-link"><span class="fa-only">مشاهده</span><span class="en-only">View</span> <i class="fas fa-arrow-left" style="margin-right:6px;"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== بخش ۳: بازی‌ها | Games (با پس‌زمینه 9:16) ===== -->
+    <div class="section-title">
+        <i class="fas fa-trophy"></i>
+        <h2><span class="fa-only">بازی‌ها</span><span class="en-only">Games</span></h2>
+    </div>
+    <div class="cards-grid">
+        <!-- بازی فوتبال خاکی با پس‌زمینه football-p1.png -->
+        <div class="card-item game-bg-football">
+            <div class="card-left">
+                <div class="card-icon orange">
+                    <img src="https://raw.githubusercontent.com/javadxpro/XP_PROJECT/main/football-logo.png" alt="فوتبال خاکی" />
+                </div>
+                <div class="card-text">
+                    <h3><span class="fa-only">بازی فوتبال خاکی ایران: کوی ابوذر</span><span class="en-only">Iran Street Football: Kooye Abozar</span></h3>
+                    <p><span class="fa-only">بازی فوتبال در کوچه و خیابان‌ها و استادیوم‌های محلی.</span><span class="en-only">Football game in alleys, streets, and local stadiums.</span></p>
+                    <span class="status-badge"><i class="fas fa-spinner fa-pulse" style="margin-left:6px;"></i> <span class="fa-only">در حال ساخت</span><span class="en-only">In Development</span></span>
+                </div>
+            </div>
+            <div class="card-action">
+                <span style="font-size:0.7rem;"><i class="far fa-clock"></i> ۱۴۰۵</span>
+            </div>
+        </div>
+
+        <!-- بازی میدان نبرد با پس‌زمینه real-p1.png -->
+        <div class="card-item game-bg-battleground">
+            <div class="card-left">
+                <div class="card-icon gold">
+                    <img src="https://raw.githubusercontent.com/javadxpro/XP_PROJECT/main/real-logo.png" alt="میدان نبرد" />
+                </div>
+                <div class="card-text">
+                    <h3><span class="fa-only">بازی مسابقه واقعی: میدان نبرد</span><span class="en-only">Real Battle: Battleground</span></h3>
+                    <p><span class="fa-only">بازی متمرکز بر حالت بقای کلاسیک و بدون خرید درون‌برنامه‌ای.</span><span class="en-only">A game focused on classic survival mode with no in-app purchases.</span></p>
+                    <span class="status-badge blue"><i class="fas fa-spinner fa-pulse" style="margin-left:6px;"></i> <span class="fa-only">در حال ساخت</span><span class="en-only">In Development</span></span>
+                </div>
+            </div>
+            <div class="card-action">
+                <span style="font-size:0.7rem;"><i class="far fa-clock"></i> ۱۴۰۵</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== گالری من | My Gallery ===== -->
+    <div class="gallery-section">
+        <div class="gallery-text">
+            <i class="fas fa-images"></i>
+            <div>
+                <h3><span class="fa-only">گالری من</span><span class="en-only">My Gallery</span></h3>
+                <p><span class="fa-only">مشاهده تمام تصاویر و دستاوردها</span><span class="en-only">View all images and achievements</span></p>
+            </div>
+        </div>
+        <a href="https://photos.app.goo.gl/tvsjarKCJFrjNvmj7" target="_blank" class="gallery-btn">
+            <i class="fas fa-external-link-alt"></i>
+            <span class="fa-only">مشاهده گالری</span><span class="en-only">View Gallery</span>
+            <i class="fas fa-arrow-left"></i>
+        </a>
+    </div>
+
+    <!-- ===== فوتر | Footer ===== -->
+    <div class="footer-note">
+        <div class="status">
+            <span class="dot"></span>
+            <span><span class="fa-only">۷ دستاورد · ۲ در حال ساخت</span><span class="en-only">7 Achievements · 2 In Development</span></span>
+        </div>
+        <div>
+            <i class="fas fa-crown" style="color:#f7b731; margin-left:6px;"></i>
+            <span class="fa-only">جواد حامدی فر · ۱۴۰۵</span>
+            <span class="en-only">Javad Hamedifar · 2026</span>
+        </div>
+        <div style="display:flex; gap:10px; font-size:0.7rem; color:#5d6a8a;">
+            <span>YouTube</span>
+            <span>Instagram</span>
+            <span>LinkedIn</span>
+            <span>GitHub</span>
+            <span>Telegram</span>
+            <span>Twitter</span>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    // ===== تغییر زبان =====
+    const app = document.getElementById('app');
+    const langBtns = document.querySelectorAll('.lang-btn');
+
+    langBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            langBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+
+            const lang = this.dataset.lang;
+            
+            app.className = 'collection-card lang-' + lang;
+            
+            if (lang === 'en') {
+                app.style.direction = 'ltr';
+                document.documentElement.dir = 'ltr';
+                document.documentElement.lang = 'en';
+            } else {
+                app.style.direction = 'rtl';
+                document.documentElement.dir = 'rtl';
+                document.documentElement.lang = 'fa';
+            }
+
+            console.log('🌐 زبان تغییر کرد به: ' + (lang === 'fa' ? 'فارسی' : 'English'));
+        });
+    });
+
+    console.log('✅ صفحه نهایی با سال ۱۴۰۵ و پس‌زمینه‌های کامل!');
+    console.log('🖼️ سایت‌ها: gamenet-p1 | volexturn-p1 (عریض)');
+    console.log('🖼️ بازی‌ها: football-p1.png | real-p1.png (9:16)');
+    console.log('📅 سال: ۱۴۰۵ / 2026');
+    console.log('📱 شبکه‌های اجتماعی: یوتیوب | اینستاگرام | لینکدین | گیت‌هاب | تلگرام | توییتر');
+    console.log('🌐 دو زبانه: فارسی / English');
+    console.log('⚔️ میدان نبرد = Battleground ✅');
+</script>
+
+</body>
+</html>
