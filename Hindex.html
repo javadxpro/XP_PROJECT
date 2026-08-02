@@ -98,6 +98,29 @@ body{min-height:100vh;background:#0d0905;color:var(--xp-fg);font-family:"Vazirma
 body.en .lang-fa{display:none}body.en .lang-en{display:inline}
 @media(max-width:768px){.xp-header{flex-direction:column;align-items:flex-start}.xp-hero h2{font-size:2rem}.xp-logo-wrap,.xp-logo-wrap img{width:60px;height:60px}}
 @media(max-width:480px){.xp-hero{padding:3rem 1rem}.xp-hero h2{font-size:1.6rem}.xp-brand h1{font-size:1.3rem}}
+
+.xp-download-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 10px 25px;
+  background: linear-gradient(135deg, #d4a735, #f5d67a);
+  color: #0d0905;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+  box-shadow: 0 5px 20px rgba(212, 167, 53, 0.3);
+}
+
+.xp-download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(212, 167, 53, 0.5);
+}
+
+.xp-download-btn i {
+  margin-left: 8px;
+}
 </style>
 </head>
 <body>
@@ -148,12 +171,22 @@ body.en .lang-fa{display:none}body.en .lang-en{display:inline}
 <section id="games" class="xp-section">
   <div class="xp-section-title"><i class="fas fa-gamepad"></i><span class="lang-fa">بازی‌های ما</span><span class="lang-en">Our Games</span></div>
   <div class="xp-games">
-    <article class="xp-game"><div class="xp-game-shine"></div>
-      <div class="xp-game-logo"><img src="https://github.com/javadxpro/XP_PROJECT/blob/main/football-logo.png?raw=true" alt=""></div>
-      <h3><span class="lang-fa">فوتبال خاکی ایران: کوی ابوذر</span><span class="lang-en">Iran Dirty Football: Kooye Aboozar</span></h3>
-      <p><span class="lang-fa">بازی فوتبال خیابانی با حال و هوای محله‌های قدیمی ایران</span><span class="lang-en">A street football game with the vibe of old Iranian neighborhoods</span></p>
-      <span class="xp-tag">🔥 <span class="lang-fa">محبوب</span><span class="lang-en">Popular</span></span>
-    </article>
+<article class="xp-game">
+  <div class="xp-game-shine"></div>
+  <div class="xp-game-logo">
+    <img src="https://github.com/javadxpro/XP_PROJECT/blob/main/football-logo.png?raw=true" alt="">
+  </div>
+  <h3><span class="lang-fa">فوتبال خاکی ایران: کوی ابوذر</span><span class="lang-en">Iran Dirty Football: Kooye Aboozar</span></h3>
+  <p><span class="lang-fa">بازی فوتبال خیابانی با حال و هوای محله‌های قدیمی ایران</span><span class="lang-en">A street football game with the vibe of old Iranian neighborhoods</span></p>
+  <span class="xp-tag">🔥 <span class="lang-fa">محبوب</span><span class="lang-en">Popular</span></span>
+  
+  <!-- دکمه دانلود -->
+  <a href="https://github.com/javadxpro/jx.games/releases/download/T/visual.game.7z" 
+     download 
+     class="xp-download-btn">
+    <i class="fas fa-download"></i> <span class="lang-fa">دانلود بازی</span><span class="lang-en">Download Game</span>
+  </a>
+</article>
     <article class="xp-game"><div class="xp-game-shine"></div>
       <div class="xp-game-logo"><img src="https://github.com/javadxpro/XP_PROJECT/blob/main/real-logo.png?raw=true" alt=""></div>
       <h3><span class="lang-fa">مسابقه واقعی: میدان نبرد</span><span class="lang-en">Real Match: Battleground</span></h3>
